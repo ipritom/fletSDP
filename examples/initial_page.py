@@ -8,7 +8,6 @@ class InitialView(FletView):
     def controls(self):
         self.test_btn = ft.ElevatedButton("TEST")
     
-
     def layout(self):
         self.page.clean()
         self.page.add(
