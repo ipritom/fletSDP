@@ -11,7 +11,7 @@ class FletApp:
             self.title = "fletSDP App Window"
 
     @abstractmethod
-    def views(self):
+    def views(self, page:ft.Page):
         '''
         Create View Class objects here in App class method
         '''

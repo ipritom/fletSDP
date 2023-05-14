@@ -14,5 +14,5 @@ class FletView:
         pass
 
     @abstractmethod
-    def controls():
+    def controls(self):
         pass
