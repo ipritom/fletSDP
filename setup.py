@@ -10,7 +10,7 @@ setup(
     author='Pritom Mojumder',
     author_email='pritom.blue2@gmail.com',
     license='MIT',
-    packages=['gonit'],
+    packages=['fletSDP'],
     install_requires=[
         "flet>=0.7.1",
     ],
