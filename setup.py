@@ -12,7 +12,7 @@ setup(
     license='MIT',
     packages=['fletSDP'],
     install_requires=[
-        "flet>=0.7.1",
+        "flet>=0.6.2",
     ],
     python_requires='>=3.9',
     zip_safe=False
