@@ -25,6 +25,7 @@ class FletApp:
         pass
 
     def main(self, page:ft.Page):
+        page.title = self.title
         self.views(page)
         self.app_presentaion()
         page.update()
