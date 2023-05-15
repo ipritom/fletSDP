@@ -20,7 +20,7 @@ class FletApp:
     @abstractmethod
     def app_presentaion(self):
         '''
-        App Presentaion Logic under this method
+        App Presentation Logic under this method
         '''
         pass
 

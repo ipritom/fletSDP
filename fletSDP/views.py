@@ -11,8 +11,27 @@ class FletView:
 
     @abstractmethod
     def layout(self):
+        '''
+        APP GUI Layout Code under this method
+        '''
         pass
 
     @abstractmethod
     def controls(self):
+        '''
+        Flet Controls which will be resued in the app dynamically
+        under this methid.
+        '''
         pass
+
+    def render(self, recall_control = True, clean_render=True):
+        '''
+        Use this method to render the GUI to the user.
+        '''
+        if recall_control == True:
+            self.controls()
+        
+        if clean_render==True:
+            self.page.clean()
+
+        self.layout()
