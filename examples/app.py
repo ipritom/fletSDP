@@ -3,35 +3,36 @@ import flet as ft
 
 from fletSDP.app import FletApp
 
-from edit_page import EditView
-from initial_page import InitialView
+from light_page import LightView
+from dark_page import DarkView
 
- 
+
 class App(FletApp):
+    
     def __init__(self, title=None) -> None:
         super().__init__(title)
 
     def views(self, page:ft.Page):
         self.page = page
-        self.init_page = InitialView(page)
-        self.edit_page = EditView(page)  
+        self.light_page_view = LightView(page)
+        self.dark_page_view = DarkView(page)  
  
     def app_presentaion(self):
-        self.init_page.layout()
-        self.init_page.test_btn.on_click = self.test_click
-        self.edit_page.edit_btn.on_click = self.edit_click
+        self.light_page_view.layout()
+        self.light_page_view.light_btn.on_click = self.light_btn_click
+        self.dark_page_view.dark_btn.on_click = self.dark_btn_click
        
     
-    def test_click(self, e):
-        self.edit_page.layout()
+    def light_btn_click(self, e):
+        self.page.theme_mode = "dark"
+        self.dark_page_view.layout()
         self.page.update()
     
-    def edit_click(self, e):
-        self.init_page.layout()
+    def dark_btn_click(self, e):
+        self.page.theme_mode = "light"
+        self.light_page_view.layout()
         self.page.update()
         
-
-
+# creating app object and running the app
 app = App()
-
 app.run()
