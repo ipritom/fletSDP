@@ -3,7 +3,7 @@ from setuptools import setup
 VERSION = "0.0.4"
 
 setup(
-    name="fletSDK",
+    name="fletSDP",
     version=VERSION,
     description="Flet Software Development Pattern -Design Patterns for Flet Software Development",
     url="https://github.com/ipritom/fletSDP",
