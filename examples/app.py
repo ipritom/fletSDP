@@ -30,7 +30,6 @@ class App(FletApp):
         self.page.update()
     
     def dark_btn_click(self, e):
-        self.dark_page_view.d +=1 
         self.page.theme_mode = "light"
         self.light_page_view.render()
         self.page.update()
