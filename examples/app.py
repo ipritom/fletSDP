@@ -19,7 +19,7 @@ class App(FletApp):
         
  
     def app_presentaion(self):
-        self.light_page_view.layout()
+        self.light_page_view.render()
         self.light_page_view.light_btn.on_click = self.light_btn_click
         self.dark_page_view.dark_btn.on_click = self.dark_btn_click
        
@@ -27,12 +27,11 @@ class App(FletApp):
     def light_btn_click(self, e):
         self.page.theme_mode = "dark"
         self.dark_page_view.render()
-        self.page.update()
-    
+       
     def dark_btn_click(self, e):
         self.page.theme_mode = "light"
         self.light_page_view.render()
-        self.page.update()
+    
         
 # creating app object and running the app
 # input()

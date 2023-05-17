@@ -28,10 +28,8 @@ class FletView:
         '''
         Use this method to render the GUI to the user.
         '''
-        # if recall_control == True:
-        #     self.controls()
-        
         if clean_render==True:
             self.page.clean()
 
         self.layout()
+        self.page.update()
