@@ -10,6 +10,8 @@ class FletApp:
         if title == None:
             self.title = "fletSDP App Window"
 
+        self.page : ft.Page = None
+
     @abstractmethod
     def views(self, page:ft.Page):
         '''
@@ -25,12 +27,13 @@ class FletApp:
         pass
 
     def main(self, page:ft.Page):
-        page.title = self.title
-        self.views(page)
+        # assign page attribute to the class
+        self.page = page
+        # creating page  
+        self.page.title = self.title
+        self.views(self.page)
         self.app_presentaion()
         page.update()
 
     def run(self):
         ft.app(target=self.main)
-
-   

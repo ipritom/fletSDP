@@ -24,14 +24,12 @@ class FletView:
         '''
         pass
 
-    def render(self, recall_control = True, clean_render=True):
+    def render(self, clean_render=True):
         '''
         Use this method to render the GUI to the user.
         '''
-        if recall_control == True:
-            self.controls()
-        
         if clean_render==True:
             self.page.clean()
 
         self.layout()
+        self.page.update()

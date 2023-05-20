@@ -13,26 +13,27 @@ class App(FletApp):
         super().__init__(title)
 
     def views(self, page:ft.Page):
-        self.page = page
-        self.light_page_view = LightView(page)
-        self.dark_page_view = DarkView(page)  
+        # self.page = page
+        self.light_page_view = LightView(self.page)
+        self.dark_page_view = DarkView(self.page)  
+        
  
     def app_presentaion(self):
-        self.light_page_view.layout()
+        self.light_page_view.render()
         self.light_page_view.light_btn.on_click = self.light_btn_click
         self.dark_page_view.dark_btn.on_click = self.dark_btn_click
        
     
     def light_btn_click(self, e):
         self.page.theme_mode = "dark"
-        self.dark_page_view.layout()
-        self.page.update()
-    
+        self.dark_page_view.render()
+       
     def dark_btn_click(self, e):
         self.page.theme_mode = "light"
-        self.light_page_view.layout()
-        self.page.update()
+        self.light_page_view.render()
+    
         
 # creating app object and running the app
+# input()
 app = App()
 app.run()

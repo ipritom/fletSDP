@@ -9,7 +9,6 @@ class DarkView(FletView):
         self.dark_btn = ft.ElevatedButton("LIGHT")
     
     def layout(self):
-        self.page.clean()
         self.page.add(
             ft.Row(
                 [
