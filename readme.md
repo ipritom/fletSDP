@@ -70,10 +70,3 @@ app = App()
 app.run()
 ```
 Now after completing the codebase in this way you can execute it by running `app.py` script.
-
-
-
-
-# Flet App Development
-
-
