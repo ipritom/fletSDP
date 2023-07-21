@@ -3,7 +3,7 @@ import flet as ft
 
 
 
-class FletApp:
+class FletSDPApp:
     def __init__(self, title=None) -> None:
         self.title = title
 

@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = "0.0.7"
+VERSION = "0.1.0"
 
 setup(
     name="fletSDP",
@@ -12,7 +12,7 @@ setup(
     license='MIT',
     packages=['fletSDP'],
     install_requires=[
-        "flet>=0.6.2",
+        "flet>=0.7.2",
     ],
     python_requires='>=3.9',
     zip_safe=False

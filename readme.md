@@ -48,7 +48,7 @@ from fletSDP.app import FletApp
 
 from viewexample import ViewExample
 
-class App(FletApp):
+class App(FletSDPApp):
     
     def __init__(self, title=None) -> None:
         super().__init__(title)
