@@ -1,13 +1,13 @@
 
 import flet as ft
 
-from fletSDP.app import FletApp
+from fletSDP.app import FletSDPApp
 
 from light_page import LightView
 from dark_page import DarkView
 
 
-class App(FletApp):
+class App(FletSDPApp):
     
     def __init__(self, title=None) -> None:
         super().__init__(title)
