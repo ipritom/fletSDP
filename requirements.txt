@@ -1,2 +1,2 @@
-flet==0.7.1
-setuptools==66.0.0
+flet==0.11.0
+setuptools==68.0.0
