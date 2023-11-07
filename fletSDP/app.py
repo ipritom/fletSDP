@@ -17,7 +17,7 @@ class FletSDPApp:
         '''
         Create View Class objects here in App class method
         '''
-        pass
+        
     
     @abstractmethod
     def app_presentaion(self):
