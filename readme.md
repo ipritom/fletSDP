@@ -28,13 +28,13 @@ import flet as ft
 from fletSDP.views import FletView
 
 class ViewExample(FletView):
-    def __init__(self, page: ft.Page) -> None:
-        super().__init__(page)
+    def __init__(self, page: ft.Page, updater) -> None:
+        super().__init__(page, updater)
 
     def controls(self):
         # declare all the controls related to this view
         # specially, controls with external/complex functions
-    
+
     def layout(self):
         # write the layout code under this method
         
@@ -55,8 +55,12 @@ class App(FletSDPApp):
 
     def views(self, page:ft.Page):
         # create the object of the view here
-        self.view_example = ViewExample(self.page) 
- 
+        self.view_example = ViewExample(self.page, updater=self.control_updater_func) 
+    
+    
+    def control_updater_func(self):
+        # update controls in a View class in the App class
+
     def app_presentaion(self):
         # app presentation Logic under this method 
         self.view_example.render()
