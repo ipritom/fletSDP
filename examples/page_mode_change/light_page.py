@@ -2,8 +2,8 @@ import flet as ft
 from fletSDP.views import FletView
 
 class LightView(FletView):
-    def __init__(self, page: ft.Page) -> None:
-        super().__init__(page)
+    def __init__(self, page: ft.Page, updater) -> None:
+        super().__init__(page, updater)
 
     def controls(self):
         self.light_btn = ft.ElevatedButton("DARK")
